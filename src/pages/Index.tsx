@@ -41,7 +41,7 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg text-white/80 leading-relaxed mb-10"
             >
-              Understanding how organisations grow, and create long-term value.
+              Helping organisations grow, and create long-term value.
             </motion.p>
 
             <motion.div

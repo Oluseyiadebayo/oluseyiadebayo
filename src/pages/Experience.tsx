@@ -170,13 +170,24 @@ const Experience = () => {
                 <h3 className="text-xl font-serif text-foreground mb-4">Refurnish</h3>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    A refurbishment initiative focused on extending the lifecycle of furniture through restoration and resale.
+                    A sustainability initiative focused on extending the lifecycle of products by changing user behaviour towards resale.
                   </p>
                   <p>
-                    The project involved operational coordination, supplier relationships, service design, and customer management.
+                    Responsibilities included business development, capital raise, executive leadership, operational coordination, and customer management.
                   </p>
+                </div>
+
+                <h3 className="text-xl font-serif text-foreground mb-4 mt-10">Open Banking</h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    This experience strengthened leadership, execution discipline, and operational problem-solving.
+                    Involvement in open banking initiatives aimed at enabling seamless financial data sharing and fostering innovation across financial services ecosystems.
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-serif text-foreground mb-4 mt-10">Propty</h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    A property tokenisation project exploring how digital assets and blockchain technology can democratise access to real estate investment opportunities.
                   </p>
                 </div>
               </motion.div>
