@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/400-italic.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+/* Oyinboade Consulting Group Design System
+   Premium advisory firm aesthetic - Deep navy with gold accents
+   Inspired by Olaniwun Ajayi design language
+*/
+
+@layer base {
+  :root {
+    /* Core palette - Deep Navy theme */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Navy Blue as primary */
+    --primary: 222 47% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light surfaces */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Navy accent */
+    --accent: 222 47% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 47% 15%;
+
+    --radius: 0.5rem;
+
+    /* Extended palette */
+    --navy-deep: 222 47% 11%;
+    --navy-medium: 222 47% 15%;
+    --navy-light: 222 40% 25%;
+    --gold: 43 74% 49%;
+    --gold-light: 43 70% 60%;
+    --gold-dark: 43 74% 40%;
+    --cream: 40 20% 98%;
+    --cream-muted: 40 15% 75%;
+
+    /* Typography */
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-sans: "Inter", system-ui, sans-serif;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 70% 60%) 100%);
+    --gradient-navy: linear-gradient(180deg, hsl(222 47% 15%) 0%, hsl(222 47% 11%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 13%) 0%, hsl(222 47% 11%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(222 47% 11% / 0.08);
+    --shadow-md: 0 4px 20px hsl(222 47% 11% / 0.12);
+    --shadow-lg: 0 8px 40px hsl(222 47% 11% / 0.16);
+    --shadow-gold: 0 4px 20px hsl(43 74% 49% / 0.2);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 222 47% 15%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 222 47% 15%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+    --card: 222 45% 13%;
+    --card-foreground: 0 0% 98%;
+    --popover: 222 45% 13%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 40% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 222 30% 18%;
+    --muted-foreground: 220 15% 60%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 30% 20%;
+    --input: 222 30% 18%;
+    --ring: 43 74% 49%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 40% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 43 74% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply font-normal tracking-tight;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--secondary));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer components {
+  /* Text styles */
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-italic-accent {
+    font-style: italic;
+    color: hsl(var(--gold));
+  }
+
+  /* Background styles */
+  .bg-navy {
+    background: hsl(var(--navy-deep));
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-navy {
+    background: var(--gradient-navy);
+  }
+
+  /* Glass effect */
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    background: hsl(var(--background) / 0.95);
+  }
+
+  .glass-effect-dark {
+    backdrop-filter: blur(12px);
+    background: hsl(var(--navy-deep) / 0.95);
+  }
+
+  /* Animated underline effect */
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(var(--gold));
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Active nav indicator */
+  .nav-active::before {
+    content: '·';
+    position: absolute;
+    left: -12px;
+    color: hsl(var(--gold));
+    font-weight: bold;
+  }
+
+  /* Section styling */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .container-tight {
+    @apply max-w-5xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  /* Decorative line */
+  .decorative-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .decorative-line::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: hsl(var(--border));
+  }
+
+  .decorative-line-after::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: hsl(var(--border));
+  }
+
+  /* Section label */
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-label::before,
+  .section-label::after {
+    content: '·';
+    color: hsl(var(--gold));
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Border line button */
+  .btn-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: hsl(var(--foreground));
+    transition: color 0.3s ease;
+  }
+
+  .btn-line::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: hsl(var(--foreground));
+    transition: width 0.3s ease, background 0.3s ease;
+  }
+
+  .btn-line:hover {
+    color: hsl(var(--gold));
+  }
+
+  .btn-line:hover::before {
+    width: 48px;
+    background: hsl(var(--gold));
+  }
+
+  /* Stat number style */
+  .stat-number {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* Image overlay gradient */
+  .image-overlay {
+    position: relative;
+  }
+
+  .image-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, hsl(var(--navy-deep) / 0.9) 100%);
+  }
+
+  /* Gold line decorations */
+  .gold-line-left {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .gold-line-left::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: hsl(var(--gold));
+  }
+
+  /* Article card date badge */
+  .date-badge {
+    @apply text-xs font-medium uppercase tracking-wider px-3 py-1;
+    background: hsl(var(--gold));
+    color: hsl(var(--navy-deep));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
