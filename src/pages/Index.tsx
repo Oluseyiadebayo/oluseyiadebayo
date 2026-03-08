@@ -31,8 +31,8 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-6"
             >
-              Strategy, Technology, Capital, and{" "}
-              <span className="italic text-gold">Systems</span>
+              Strategy, Technology,{" "}
+              <span className="italic text-gold">Operations</span>
             </motion.h1>
 
             <motion.p
