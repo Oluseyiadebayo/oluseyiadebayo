@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Linkedin, Send } from "lucide-react";
+import { Linkedin, Twitter, Send } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 
@@ -81,6 +81,16 @@ export default function Contact() {
               >
                 <Linkedin size={18} />
                 Connect on LinkedIn
+              </a>
+
+              <a
+                href="https://x.com/seyi_ae"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 border border-border text-foreground font-medium text-sm hover:border-gold hover:text-gold transition-colors mb-8"
+              >
+                <Twitter size={18} />
+                Follow on X
               </a>
 
               <div className="mt-8 p-6 border border-border bg-secondary/30">
