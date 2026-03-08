@@ -31,8 +31,8 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-6"
             >
-              Strategy, Technology, Capital, and{" "}
-              <span className="italic text-gold">Systems</span>
+              Strategy, Technology,{" "}
+              <span className="italic text-gold">Operations</span>
             </motion.h1>
 
             <motion.p
@@ -41,7 +41,7 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg text-white/80 leading-relaxed mb-10"
             >
-              Understanding how organisations grow, and create long-term value.
+              Helping organisations grow, and create long-term value.
             </motion.p>
 
             <motion.div
