@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 
 const footerLinks = [
   { name: "Home", path: "/" },
@@ -23,15 +23,26 @@ export function Footer() {
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-sm">
               Strategy and advisory professional working across consulting, financial services, and venture ecosystems.
             </p>
-            <a
-              href="https://www.linkedin.com/in/oluseyi-adebayo/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 p-2 text-white/60 hover:text-gold transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={18} />
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/oluseyi-adebayo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 p-2 text-white/60 hover:text-gold transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://x.com/seyi_ae"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 p-2 text-white/60 hover:text-gold transition-colors"
+                aria-label="Twitter / X"
+              >
+                <Twitter size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Links Column */}
@@ -65,6 +76,14 @@ export function Footer() {
               className="text-sm text-white/60 hover:text-gold transition-colors block mb-3"
             >
               LinkedIn Profile
+            </a>
+            <a
+              href="https://x.com/seyi_ae"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/60 hover:text-gold transition-colors block mb-3"
+            >
+              @seyi_ae on X
             </a>
           </div>
         </div>
