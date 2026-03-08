@@ -33,7 +33,7 @@ const areasOfInterest = [
   "Strategy and organisational development",
   "Venture ecosystems in emerging markets",
   "Capital allocation and investment decision-making",
-  "Financial services transformation",
+  "Digital transformation",
   "Technology-enabled business models",
   "SME growth and economic development",
 ];
