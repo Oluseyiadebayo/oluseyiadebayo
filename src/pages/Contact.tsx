@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Linkedin, Twitter, Send } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function Contact() {
   const { toast } = useToast();
