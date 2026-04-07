@@ -238,8 +238,8 @@ const Index = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className="border-l-2 border-gold pl-6"
                 >
-                  <p className="text-white font-medium">B.Eng — Mechanical Engineering</p>
-                  <p className="text-white/60 text-sm">Covenant University</p>
+                  <p className="text-white font-medium">Entrepreneurship in Emerging Economies</p>
+                  <p className="text-white/60 text-sm">Harvard University</p>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
