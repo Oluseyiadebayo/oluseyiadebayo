@@ -18,7 +18,7 @@ const roles = [
     org: "Living Soul Group",
     role: "Director",
     description:
-      "Serving as a director within a diversified organisation with interests across hospitality, education, real estate, and agriculture. Responsibilities include contributing to strategic thinking around business development, operational growth, and long-term sustainability across its operating sectors.",
+      "Serving as a director within a diversified organisation committed to investing in job-creating and impact-oriented sectors of the Nigerian economy, with operating interests spanning hospitality, education, real estate, and agriculture. The Group operates with a long-term thesis centred on economic development and social value creation, deploying capital and operational capacity into sectors that drive employment, skills development, and community resilience. Responsibilities include contributing to strategic direction across business development, operational growth, and sustainability initiatives. Additionally, the Group's foundation arm undertakes philanthropic and developmental work aimed at expanding access to education, healthcare, and economic opportunity within underserved communities.",
   },
 ];
 
