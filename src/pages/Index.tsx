@@ -93,7 +93,7 @@ const Index = () => {
                 className="space-y-6"
               >
                 <p className="text-muted-foreground leading-relaxed">
-                  Oluseyi Adebayo is a strategy and advisory professional whose work sits at the intersection of business strategy, operations, and capital allocation. He works across consulting, financial services, and venture ecosystems, with a focus on helping organisations and founders navigate complexity, growth, and long-term sustainability.
+                  Strategy and Advisory professional sitting at the intersection of business strategy, operations, and technology. With close to a decade experience across consulting, financial services, and venture ecosystems, with a focus on helping organisations and founders navigate complexity, growth, and long-term sustainability.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   His interests span financial services, technology, venture ecosystems, and institutional development across emerging markets — with a focus on understanding how organisations deploy capital, structure operations, and build sustainable growth strategies.
