@@ -6,6 +6,7 @@ const corsHeaders = {
 };
 
 const RECIPIENT_EMAIL = "adebayoseyi24@gmail.com";
+const GATEWAY_URL = 'https://connector-gateway.lovable.dev/resend';
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -22,40 +23,36 @@ serve(async (req) => {
       );
     }
 
+    // Store in database
+    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+    const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
+    const supabase = createClient(supabaseUrl, supabaseKey);
+
+    await supabase.from("contact_messages").insert({ name, email, subject, message });
+
+    // Send email via Resend gateway
+    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
-    if (!RESEND_API_KEY) {
-      // Fallback: store in database
-      const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-      const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-      const { createClient } = await import("https://esm.sh/@supabase/supabase-js@2");
-      const supabase = createClient(supabaseUrl, supabaseKey);
-
-      const { error } = await supabase.from("contact_messages").insert({
-        name,
-        email,
-        subject,
-        message,
-      });
-
-      if (error) throw error;
-
+    if (!LOVABLE_API_KEY || !RESEND_API_KEY) {
+      console.warn("Email keys not configured, message stored only");
       return new Response(
         JSON.stringify({ success: true, method: "stored" }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Send via Resend if key exists
-    const res = await fetch("https://api.resend.com/emails", {
+    const res = await fetch(`${GATEWAY_URL}/emails`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${LOVABLE_API_KEY}`,
+        "X-Connection-Api-Key": RESEND_API_KEY,
       },
       body: JSON.stringify({
         from: `Contact Form <onboarding@resend.dev>`,
-        to: RECIPIENT_EMAIL,
+        to: [RECIPIENT_EMAIL],
         subject: `[Contact] ${subject}`,
         html: `
           <h2>New Contact Message</h2>
