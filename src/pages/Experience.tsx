@@ -142,7 +142,7 @@ const Experience = () => {
         </div>
       </section>
 
-      {/* Selected Projects */}
+      {/* Consulting Projects */}
       <section className="section-padding">
         <div className="container-wide">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
@@ -155,7 +155,7 @@ const Experience = () => {
               >
                 <span className="section-label mb-4 block">PROJECTS</span>
                 <h2 className="text-3xl md:text-4xl font-serif text-foreground">
-                  Selected Projects
+                  Consulting Projects
                 </h2>
               </motion.div>
             </div>
@@ -167,27 +167,35 @@ const Experience = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-xl font-serif text-foreground mb-4">Refurnish</h3>
+                <h3 className="text-xl font-serif font-bold text-foreground mb-2">Circular Economy & Sustainable Consumer Behaviour</h3>
+                <span className="text-sm text-gold uppercase tracking-wider font-medium mb-4 block">Refurnish</span>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    A sustainability initiative focused on extending the lifecycle of products by changing user behaviour towards resale.
-                  </p>
-                  <p>
-                    Responsibilities included business development, capital raise, executive leadership, operational coordination, and customer management.
+                    A sustainability-oriented consulting engagement centred on extending the lifecycle of consumer products through behavioural interventions that incentivise resale and reuse. The project examined how platform design, pricing mechanisms, and user experience architecture could be leveraged to shift consumer behaviour away from linear consumption patterns towards circular economy participation. Responsibilities encompassed business development strategy, capital raise structuring, executive leadership coordination, operational planning, and customer lifecycle management.
                   </p>
                 </div>
 
-                <h3 className="text-xl font-serif text-foreground mb-4 mt-10">Open Banking</h3>
+                <h3 className="text-xl font-serif font-bold text-foreground mb-2 mt-10">Financial Infrastructure & Data Interoperability</h3>
+                <span className="text-sm text-gold uppercase tracking-wider font-medium mb-4 block">Open Banking</span>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Involvement in open banking initiatives aimed at enabling seamless financial data sharing and fostering innovation across financial services ecosystems.
+                    Involvement in consulting engagements around open banking frameworks aimed at enabling seamless, secure financial data sharing across institutional boundaries. This work explored the regulatory, technical, and commercial dimensions of building interoperable financial services ecosystems — examining how standardised APIs, consent-driven data portability, and collaborative infrastructure can foster innovation, deepen financial inclusion, and create new value propositions for consumers and institutions alike.
                   </p>
                 </div>
 
-                <h3 className="text-xl font-serif text-foreground mb-4 mt-10">Propty</h3>
+                <h3 className="text-xl font-serif font-bold text-foreground mb-2 mt-10">Real Estate Democratisation & Digital Asset Structuring</h3>
+                <span className="text-sm text-gold uppercase tracking-wider font-medium mb-4 block">Propty</span>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    A property tokenisation project exploring how digital assets and blockchain technology can democratise access to real estate investment opportunities.
+                    A consulting project exploring the intersection of property tokenisation, blockchain-enabled fractional ownership, and digital asset structuring as mechanisms for democratising access to real estate investment. The engagement investigated how distributed ledger technology, smart contract automation, and regulatory-compliant token issuance frameworks could lower barriers to entry for retail investors while enhancing liquidity and transparency within traditionally illiquid property markets.
+                  </p>
+                </div>
+
+                <h3 className="text-xl font-serif font-bold text-foreground mb-2 mt-10">SME Capital Access & Funding Ecosystem Development</h3>
+                <span className="text-sm text-gold uppercase tracking-wider font-medium mb-4 block">Incubator Advisory & Support</span>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Advisory and support work with incubators and accelerators including Startup Engine and AIBx (an Ibadan-based incubator), focused on strengthening the institutional capacity of early-stage support ecosystems across Nigeria. This work addressed a critical gap in the entrepreneurial landscape: the persistent challenge of capital access for small and medium-sized enterprises (SMEs) operating in emerging markets. Engagements involved developing investment readiness frameworks, refining pitch methodologies, facilitating connections between founders and capital providers, and contributing to programmatic design that equips entrepreneurs with the financial literacy, governance structures, and strategic planning capabilities necessary to attract and deploy growth capital effectively.
                   </p>
                 </div>
               </motion.div>
